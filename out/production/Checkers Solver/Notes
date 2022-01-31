@@ -1,0 +1,52 @@
+Checkers uses an 8x8 board and has a fixed starting point
+there are 12 white and 12 black pieces on each side of the board
+pieces can only move diagonally and if it jumps over an opposing piece that piece is taken
+
+we will use a (look ahead) AI opponent which will work by using a tree search,
+each node of a tree is a game state(the future of the game)
+each node must have a value to tell how good it is
+each level of the tree alternates between the 2 players
+a min max algorithm will need to be used to minimise the benefit of the opponent and maximise the AI's benefit
+a termination node will represent the stage where the game has ended as one side has no possible moves.
+
+start with an exhaustive search going as far down the tree as possible then can throw away bad outcomes
+
+
+after someone makes a successful move, make the AI make a move, remember to update this on the buttons icons
+
+look at min max, looking more forward into the future, maxDepth and recursion
+
+
+
+MIN  MAX
+on the tree, every node has a gamestate which has a + or - value of how good it will be
+every other row is one player e.g.
+
+player
+opponent
+player
+opponent
+
+to calculate the value of the root node, it tells us about the past;
+we expand through nodes to find their values, regardless of the values at the gamestate
+threading AI code
+
+alpha beta pruning - small changes
+https://www.youtube.com/watch?v=xBXHtz4Gbdo&t=611s
+https://www.youtube.com/watch?v=Nwl3LuG-fs8
+min max video again
+
+
+Look at the binary values and 64-X to see it its correct
+then
+store previous states due to binary values, so if the AI has seen it before, to discard that branch
+
+through a combination of pruning and set operations, the speed increaces a lot from using loops and arraylists.
+
+
+
+UI AND UX PROGRAMS
+
+
+
+
